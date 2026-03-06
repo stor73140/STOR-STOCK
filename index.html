@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Stock RM</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+
+<div id="loginPage">
+
+<img src="logo.png" class="logo">
+
+<h2>Connexion</h2>
+
+<input id="loginUser" placeholder="Login">
+<input id="loginPass" type="password" placeholder="Mot de passe">
+
+<button onclick="login()">Connexion</button>
+
+</div>
+
+<div id="menuPage" class="hidden">
+
+<h1>Stock RM</h1>
+
+<div class="grid">
+
+<button onclick="openStock('stock mécanique')">⚙️ Stock mécanique</button>
+
+<button onclick="openStock('stock électrique')">🔌 Stock électrique</button>
+
+<button onclick="openGlobal()">📦 Stock global</button>
+
+<button onclick="openRapport()">📊 Rapports</button>
+
+</div>
+
+</div>
+
+<div id="stockPage" class="hidden">
+
+<h2 id="stockTitle"></h2>
+
+<input id="search" placeholder="🔎 Rechercher">
+
+<select id="emplacement"></select>
+
+<table>
+
+<thead>
+<tr>
+<th>Pièce</th>
+<th>Qté</th>
+<th>Emplacement</th>
+<th></th>
+</tr>
+</thead>
+
+<tbody id="tableStock"></tbody>
+
+</table>
+
+<button onclick="backMenu()">⬅ Retour</button>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
